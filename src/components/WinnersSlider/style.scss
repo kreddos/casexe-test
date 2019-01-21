@@ -1,0 +1,48 @@
+.winnersSlider {
+  .winnersSliderArrow:before {
+    display: none;
+  }
+  .winnersSliderArrow {
+    margin-top: -8px;
+  }
+
+  .winnerSliderItem {
+    display: flex;
+    justify-content: center;
+    .winnerGameImgContainer {}
+    .winnerGameInfo {
+      padding-left: 9px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      line-height: 1;
+      .gameName {
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .win {
+        font-size: 14px;
+        font-weight: 700;
+        color: #f2de7b;
+
+        &::after {
+          content: "\0024"
+        }
+      }
+      
+      .playerName {
+        font-family: "Roboto Condensed";
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+      }
+    }
+  }
+
+}

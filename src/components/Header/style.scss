@@ -1,0 +1,189 @@
+.scLink {
+  display: inline-flex;
+  width: 23px;
+  height: 23px;
+  background-color: #656666;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14.4px;
+
+  &:hover, &:focus {
+    color: #ffffff;
+  }
+}
+
+header.header {
+  .fastReg {
+    border: none;
+    text-shadow: 1px 1px 2px rgba(231, 82, 57, 0.75), -1px 1px 2px rgba(231, 82, 57, 0.75), 1px -1px 2px rgba(231, 82, 57, 0.75), -1px -1px 2px rgba(231, 82, 57, 0.75), 2px 2px 2px rgba(231, 82, 57, 0.75), -2px 2px 2px rgba(231, 82, 57, 0.75), 2px -2px 2px rgba(231, 82, 57, 0.75), -2px -2px 2px rgba(231, 82, 57, 0.75);
+    color: #ffd3c4;
+    font-size: 14px;
+    font-weight: 400;
+    background: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .changeLanguage {
+    color: #656666;
+    font-size: 12px;
+    font-weight: 300;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+
+    img {
+      margin-right: 5px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .scNetworks {
+    padding: 0px 40px 0px 15px;
+    .scLink {
+      margin: 0px 7px;
+    }
+  }
+
+  .mainMenu {
+     /* Style for "ВСЕ ИГРЫ" */
+    list-style: none;
+    display: flex;
+    color: #a2a1a1;
+    font-size: 11px;
+    font-weight: 300; 
+    justify-content: space-between;
+    padding: 24px 0px 21px 0px;
+    margin: 0px;
+    & > li > a {
+      color: #a2a1a1;
+    }
+  }
+
+  .mainActions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .signRow {
+    border: 1px solid #9fd6f2;
+    border-width: 1px 0px 1px 0px; 
+    background-color: #000000;
+  }
+
+  .logoContainer {
+    @media only screen and (max-width: 320px) {
+      overflow: hidden;
+    }
+  }
+
+  .logo {
+    margin-left: -230px;
+  }
+
+  .signActions {
+    padding-top: 15px; 
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .passwordHelper {
+      color: #a2a1a1;
+      font-size: 11px;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+
+    .inputs {
+      display: flex;
+      align-items: flex-start;
+      padding: 0px 25px;
+
+      div {
+        width: 100%;
+        margin-left: 10px; 
+      }
+    }
+
+    input {
+      background-color: #f1f0f0;
+      padding: 3px 10px px;
+      border: none;
+      border-radius: 3px;
+
+      color: #838484;
+      font-size: 12px;
+      font-weight: 400;
+
+      &::placeholder {
+        font-style: italic;
+      }
+    }
+
+  }
+
+  .infoBlock {
+    border-top: 1px solid #3c43c5;
+    border-bottom: 1px solid #3c43c5;
+    background-color: #000000;
+
+    padding: 22px 0px 23px;
+
+    .title {
+      text-shadow: 1px 1px 2px rgb(231, 82, 57), 1px -1px 2px rgb(231, 82, 57), -1px 1px 2px rgb(231, 82, 57), -1px -1px 2px rgb(231, 82, 57),
+                  2px 2px 2px rgb(231, 82, 57), 2px -2px 2px rgb(231, 82, 57), -2px 2px 2px rgb(231, 82, 57), -2px -2px 2px rgb(231, 82, 57);
+      color: #ffce81;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      text-transform: uppercase;
+      padding-bottom: 9px; 
+    }
+
+    .jackpotList {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      .coin {
+        background-clip: text;
+        color: #e8e9ea;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 16px;
+        /* Text style for "1,  589 65" */
+        letter-spacing: -1.15px;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  
+        &.gold {
+          background-image: linear-gradient(to top, #fefacf 0%, #bf792a 5%, #fed204 30%, #feeb8e 50%, #fed204 70%, #bf7a2a 95%, #efe15c 100%);
+        }
+        &.silver {
+          background-image: linear-gradient(to top, #ffffff 0%, #636464 5%, #cecdcd 30%, #ffffff 50%, #cecdcd 70%, #636464 95%, #ffffff 100%);
+        }
+        
+        &.bronze {
+          background-image: linear-gradient(to top, #fff1cf 0%, #9e5324 5%, #ec964b 30%, #fef1d0 50%, #ec964b 70%, #9e5424 95%, #fef1d0 100%);
+        }
+  
+        img {
+          margin: -10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.ipControl {
+  .controlMessage {
+    padding-top: 5px;
+  }
+
+  .ipControlForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .ipControlList {
+    margin-top: 20px; 
+  }
+}
+
+.linkButton {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.addIpButton {
+  padding-left: 10px;
+  .icon {
+    display: inline-block;
+    background: #138ff7;
+    width: 16px;
+    height: 16px;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+}
+
+.ipListItem {
+  display: flex;
+  justify-content: space-between;
+  
+  .ipTitle {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+

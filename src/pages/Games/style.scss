@@ -1,0 +1,182 @@
+.main {
+  &>.games {
+    @media only screen and (max-width: 320px) {
+      overflow: hidden;
+    }
+    background: url("/assets/img/bg.png");
+  }
+
+  .mainActions {
+    
+    padding: 12px 0px 5px;
+
+    button.button {
+      box-shadow: 1px 1px 2px rgba(231, 82, 57, 0.75), -1px 1px 2px rgba(231, 82, 57, 0.75), 1px -1px 2px rgba(231, 82, 57, 0.75), -1px -1px 2px rgba(231, 82, 57, 0.75),
+                  2px 2px 2px rgba(231, 82, 57, 0.75), -2px 2px 2px rgba(231, 82, 57, 0.75), 2px -2px 2px rgba(231, 82, 57, 0.75), -2px -2px 2px rgba(231, 82, 57, 0.75),
+                  inset   1px 1px 2px rgba(231, 82, 57, 0.75), inset  -1px 1px 2px rgba(231, 82, 57, 0.75), inset  1px -1px 2px rgba(231, 82, 57, 0.75), inset -1px -1px 2px rgba(231, 82, 57, 0.75),
+                  inset   2px 2px 2px rgba(231, 82, 57, 0.75), inset  -2px 2px 2px rgba(231, 82, 57, 0.75), inset  2px -2px 2px rgba(231, 82, 57, 0.75), inset -2px -2px 2px rgba(231, 82, 57, 0.75);
+      text-shadow: 1px 1px 2px rgba(231, 82, 57, 0.75), -1px 1px 2px rgba(231, 82, 57, 0.75), 1px -1px 2px rgba(231, 82, 57, 0.75), -1px -1px 2px rgba(231, 82, 57, 0.75),
+                    2px 2px 2px rgba(231, 82, 57, 0.75), -2px 2px 2px rgba(231, 82, 57, 0.75), 2px -2px 2px rgba(231, 82, 57, 0.75), -2px -2px 2px rgba(231, 82, 57, 0.75);
+      
+      border: 2px solid #ffce81;
+      background: none;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0px;
+
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .mainGames {
+    .filters {
+      color: #ffffff;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 400;
+
+      ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: inline-flex;
+
+        li {
+          padding: 5px;
+        }
+
+        button {
+          border: none;
+          background: none;
+          font-weight: 700;
+          color: #ffffff;
+        }
+      }
+    }
+    
+    .gamesSearch {
+      position: relative;
+      
+      img {
+        position: absolute;
+        right: 20px;
+        top: 7px; 
+      }
+
+      input {
+        box-shadow: 1px 1px 2px rgb(57, 139, 231), -1px 1px 2px rgb(57, 139, 231), 1px -1px 2px rgb(57, 139, 231), -1px -1px 2px rgb(57, 139, 231),
+                    2px 2px 2px rgb(57, 139, 231), -2px 2px 2px rgb(57, 139, 231), 2px -2px 2px rgb(57, 139, 231), -2px -2px 2px rgb(57, 139, 231);
+        border: 2px solid #81fbff;
+        padding-right: 40px;
+        &::placeholder {
+          opacity: 0.5;
+          color: #a2a1a1;
+          font-style: italic;
+          font-size: 13px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .games {
+      margin: 5px 0px 0px;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
+      grid-row-gap: 18px;
+      grid-column-gap: 25px;
+      grid-auto-rows: minmax(100px, auto);
+
+      .promotionsItem {
+        grid-column: 1/1;
+        grid-row: 1/1;
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 420px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        .promotionsItem {
+          grid-column: 1/3;
+          grid-row: 1/3;
+        }
+      }
+      // Pads and larger phones
+      @media only screen and (min-width: 600px) {
+        grid-template-columns: repeat(3, 1fr);
+
+        .promotionsItem {
+          grid-column: 2/4;
+          grid-row: 1/3;
+        }
+      }
+      
+      @media only screen and (min-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+
+        .promotionsItem {
+          grid-column: 3/5;
+          grid-row: 1/3;
+        }
+      }
+      // Horizontal pads and laptops
+      @media only screen and (min-width: 1025px) {
+        grid-template-columns: repeat(5, 1fr);
+        .promotionsItem {
+          grid-column: 6/4;
+          grid-row: 1 / 3;
+        }
+      }
+
+      .gameItem {
+        
+        .game {
+          position: relative;
+          img {
+            width: 100%;
+          }
+
+          .gameActions {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;        
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            a, button {
+              margin: 5px;
+            }
+          }
+  
+          &:hover {
+            .gameActions {
+              display: flex;
+            }
+          }
+        }
+        .gameName {
+          color: #e8e9ea;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 16px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .gamesActions {
+      display: flex;
+      justify-content: center;
+      padding: 42px 0px 27px;
+    }
+  }
+}

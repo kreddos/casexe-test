@@ -1,0 +1,73 @@
+.modalContainer {
+  z-index: 1000;
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0px 20%;
+
+  @media only screen and (min-width: 320px) {
+    padding: 0px;
+  }
+  
+  // Pads and larger phones
+  @media only screen and (min-width: 600px) {
+  
+  }
+  
+  // Larger pads
+  @media only screen and (min-width: 768px) {
+    padding: 5% 10%;
+  }
+  
+  // Horizontal pads and laptops
+  @media only screen and (min-width: 992px) {
+    padding: 0px 20%;
+  }
+  
+  // Really large screens
+  @media only screen and (min-width: 1382px) {
+    padding: 0px 30%;
+  }
+  
+  .modal {
+    @media only screen and (max-width: 768px) {
+      height: 100%;
+    }
+    overflow-y: auto;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(106, 219, 252, 0.35);
+    border-radius: 2px;
+    border: 1px solid #138ff7;
+    background-color: #000722;
+    
+    .modalHeader {
+      padding: 15px 16px 24px 16px;
+      text-align: right;
+      .modalClose {
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        align-self: flex-end;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: uppercase;
+        .closeIcon {
+          margin-right: 5px; 
+        }
+      }
+    }
+
+    .modalBody {
+      padding: 0px 56px 40px 56px;
+    }
+  }
+}

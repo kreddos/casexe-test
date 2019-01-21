@@ -30,6 +30,7 @@ class IpControl extends Component {
     this.onChangeValue = this.onChangeValue.bind(this);
     this.onFocus = this.onFocus.bind(this);
     this.onKeyPress = this.onKeyPress.bind(this);
+    this.renderIp = this.renderIp.bind(this);
   }
 
   state = {

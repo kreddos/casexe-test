@@ -86,6 +86,11 @@ class IpControl extends Component {
       return;
     }
 
+    const { list } = this.props;
+    if (list.length >= 5) {
+      return;
+    }
+
     this.onAddIp();
   }
 

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faVk, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import WinnersSlider from '../WinnersSlider';
 import SignUpForm from '../SignUpForm';
+import menu from '../../data/menu.json';
 import './style.scss';
 
 class Header extends Component {
@@ -24,6 +26,12 @@ class Header extends Component {
     this.setState({ isSignUpFormOpen: false });
   }
 
+  renderMenuItems() {
+    return menu.map((item, index) => (
+      <li key={index}><Link to={item.path}>{item.pageName.toUpperCase()}</Link></li>
+    ));
+  }
+
   render() {
     const { isSignUpFormOpen } = this.state;
     return (
@@ -32,12 +40,7 @@ class Header extends Component {
           <div className="row">
             <div className="col-sm">
               <ul className="mainMenu">
-                <li><a href="/">ВСЕ ИГРЫ</a></li>
-                <li><a href="/">ПОПОЛНЕНИЕ СЧЕТА</a></li>
-                <li><a href="/">ПОЛУЧИТЬ ВЫИГРЫШ</a></li>
-                <li><a href="/">БОНУСЫ</a></li>
-                <li><a href="/">МОБИЛЬНАЯ ВЕРСИЯ</a></li>
-                <li><a href="/">КОНТАКТЫ</a></li>
+                {this.renderMenuItems()}
               </ul>
             </div>
             <div className="col-sm mainActions">

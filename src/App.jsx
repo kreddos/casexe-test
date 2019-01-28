@@ -1,11 +1,16 @@
 import React from 'react';
-import Layout from './components/Layout';
-import Games from './pages/Games';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import Router from './Router';
+import rootReducer from './reducers';
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const App = () => (
-  <Layout>
-    <Games />
-  </Layout>
+  <Provider store={store}>
+    <Router />
+  </Provider>
 );
 
 export default App;

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "/",
+    "pageName": "Все игры"
+  },
+  {
+    "path": "/refill",
+    "pageName": "Пополнение счета"
+  },
+  {
+    "path": "/get-a-win",
+    "pageName": "Получить выйгрыш"
+  },
+  {
+    "path": "/bonuses",
+    "pageName": "Бонусы"
+  },
+  {
+    "path": "/mobile",
+    "pageName": "Мобильная версия"
+  },
+  {
+    "path": "/contacts",
+    "pageName": "Контакты"
+  }
+]
